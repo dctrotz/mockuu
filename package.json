@@ -3,11 +3,14 @@
   "version": "0.0.0",
   "description": "",
   "main": "dist/index.js",
+  "type": "module",
   "scripts": {
     "dev": "tsc --watch",
     "lint": "eslint --ext .ts .",
     "lint:fix": "eslint --fix --ext ts .",
-    "build": "tsc --module ES6"
+    "build": "tsc --module ES6",
+    "test": "vitest",
+    "coverage": "vitest run --coverage"
   },
   "keywords": [],
   "author": "",
@@ -22,11 +25,12 @@
     "eslint-plugin-promise": "^6.0.1",
     "husky": "^8.0.1",
     "lint-staged": "^13.0.3",
-    "typescript": "^4.8.4"
+    "typescript": "^4.8.4",
+    "vitest": "^0.23.4"
   },
   "lint-staged": {
-    "*.{ts,tsx,json}": [
-      "lint:fix"
+    "*.{ts,tsx}": [
+      "eslint --fix --ext ts ."
     ]
   }
 }
