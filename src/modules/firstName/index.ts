@@ -1,7 +1,7 @@
-import data from '../../locale/firstName.json'
+import data from '../../locale/fistName'
 import { faker, randomElement } from '../core'
 
-export interface FirstNameOptions {
+export interface NameOptions {
   gender?: 'female' | 'male'
   length?: number
 }
@@ -9,7 +9,7 @@ export interface FirstNameOptions {
 /**
  * Generate a random firstName
  *
- * @param {FirstNameOptions} [options] - FirstNameOptions
+ * @param {NameOptions} [options] - FirstNameOptions
  *
  * @example
  *
@@ -24,7 +24,7 @@ export interface FirstNameOptions {
  * rFirstName({ length: 2, gender: 'male' }) // ['Franklin', 'Jesus']
  */
 
-export function rFirstName (options?: FirstNameOptions) {
+export function rFirstName (options?: NameOptions) {
   const gender = options?.gender ?? randomElement(['male', 'female'])
   const names = data[gender]
 
