@@ -1,4 +1,4 @@
-import data from '../../locale/fistName'
+import data from '../../locale/fist_name'
 import { faker, randomElement } from '../core'
 
 export interface NameOptions {
