@@ -2,6 +2,8 @@ export interface Options {
   length?: number
 }
 
+export type Function<T> = () => T
+
 /**
  * It returns a random element from an array
  *
@@ -11,12 +13,16 @@ export interface Options {
  *
  */
 
-export function faker<T> (data: Readonly<T[]>, options?: Options) {
-  if (options?.length) {
-    return Array.from({ length: options.length }, () => randomElement(data))
+export function faker<T> (data: Readonly<T[]> | Function<T>, options?: Options) {
+  const generator = Array.isArray(data)
+    ? () => randomElement(data)
+    : data as Function<T>
+
+  if (!options?.length) {
+    return generator()
   }
 
-  return randomElement(data)
+  return Array.from({ length: options.length }, () => generator())
 }
 
 /**

@@ -15,6 +15,6 @@ import { faker, Options } from '../core'
  * rLastName({ length: 2 }) // ['Chanthara', 'Chauke']
  */
 
-export function rLastName (options?: Options) {
+export function rLastName (options?: Options): string | string[] {
   return faker(data, options)
 }

@@ -1,2 +1,5 @@
 export { rFirstName } from './modules/firstName'
 export { rLastName } from './modules/lastName'
+export { rDomainSuffix } from './modules/domainSuffix'
+export { rEmailProvider } from './modules/emailProvider'
+export { rEmail } from './modules/email'

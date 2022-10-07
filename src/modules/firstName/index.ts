@@ -24,7 +24,7 @@ export interface NameOptions {
  * rFirstName({ length: 2, gender: 'male' }) // ['Franklin', 'Jesus']
  */
 
-export function rFirstName (options?: NameOptions) {
+export function rFirstName (options?: NameOptions) : string | string[] {
   const gender = options?.gender ?? randomElement(['male', 'female'])
   const names = data[gender]
 
