@@ -2,7 +2,7 @@
   "name": "typescript-library",
   "version": "0.0.0",
   "description": "",
-  "main": "dist/index.js",
+  "main": "dist/src/index.js",
   "type": "module",
   "scripts": {
     "dev": "tsc --watch",
@@ -18,6 +18,7 @@
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^5.39.0",
     "@typescript-eslint/parser": "^5.39.0",
+    "@vitest/coverage-c8": "^0.24.0",
     "eslint": "^8.24.0",
     "eslint-config-standard": "^17.0.0",
     "eslint-plugin-import": "^2.26.0",
