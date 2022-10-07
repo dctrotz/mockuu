@@ -1,15 +1,27 @@
 import data from '../../locale/firstName.json'
 import { faker, randomElement } from '../core'
 
-interface FirstNameOptions {
+export interface FirstNameOptions {
   gender?: 'female' | 'male'
   length?: number
 }
 
 /**
- * It returns a random first name from a list of names
+ * Generate a random firstName
+ *
  * @param {FirstNameOptions} [options] - FirstNameOptions
- * @returns A random first name
+ *
+ * @example
+ *
+ * rFirstName({ length: 2 }) // ['Kari','Dianna']
+ *
+ * @example
+ *
+ * rFirstName({ gender: 'female' }) // 'Nadine'
+ *
+ * @example
+ *
+ * rFirstName({ length: 2, gender: 'male' }) // ['Franklin', 'Jesus']
  */
 
 export function rFirstName (options?: FirstNameOptions) {
