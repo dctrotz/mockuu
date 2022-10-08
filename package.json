@@ -1,33 +1,53 @@
 {
-  "name": "typescript-library",
+  "name": "typescript-library1000",
   "version": "0.0.0",
   "description": "",
-  "main": "dist/src/index.js",
-  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "author": "mateocodes",
+  "license": "MIT",
+  "files": [
+    "dist"
+  ],
+  "keywords": [
+    "fake data",
+    "fake-data-generator",
+    "random data"
+  ],
+  "exports": {
+    "./package.json": "./package.json",
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js"
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/MateeoCodes/faker"
+  },
   "scripts": {
     "dev": "tsc --watch",
     "lint": "eslint --ext .ts .",
     "lint:fix": "eslint --fix --ext ts .",
-    "build": "tsc --module ES6",
+    "build": "tsup",
     "test": "vitest",
     "coverage": "vitest run --coverage"
   },
-  "keywords": [],
-  "author": "",
-  "license": "MIT",
   "devDependencies": {
-    "@typescript-eslint/eslint-plugin": "^5.39.0",
-    "@typescript-eslint/parser": "^5.39.0",
-    "@vitest/coverage-c8": "^0.24.0",
-    "eslint": "^8.24.0",
-    "eslint-config-standard": "^17.0.0",
-    "eslint-plugin-import": "^2.26.0",
-    "eslint-plugin-n": "^15.3.0",
-    "eslint-plugin-promise": "^6.0.1",
-    "husky": "^8.0.1",
-    "lint-staged": "^13.0.3",
-    "typescript": "^4.8.4",
-    "vitest": "^0.23.4"
+    "@typescript-eslint/eslint-plugin": "5.39.0",
+    "@typescript-eslint/parser": "5.39.0",
+    "@vitest/coverage-c8": "0.24.0",
+    "eslint": "8.24.0",
+    "eslint-config-standard": "17.0.0",
+    "eslint-plugin-import": "2.26.0",
+    "eslint-plugin-n": "15.3.0",
+    "eslint-plugin-promise": "6.0.1",
+    "husky": "8.0.1",
+    "lint-staged": "13.0.3",
+    "tsup": "6.2.3",
+    "typescript": "4.8.4",
+    "vitest": "0.23.4"
   },
   "lint-staged": {
     "*.{ts,tsx}": [
