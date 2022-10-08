@@ -1,5 +1,5 @@
 import { faker, Options } from '../core'
-import data from 'src/locale/email_provider'
+import data from '../../locale/email_provider'
 
 /**
  * Generate a random email provider.
@@ -12,6 +12,6 @@ import data from 'src/locale/email_provider'
  * @returns A string or an array of strings.
  */
 
-export function rEmailProvider (options?: Options): string | string[] {
+export function rEmailProvider (options?: Options) {
   return faker(data, options)
 }

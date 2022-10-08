@@ -45,7 +45,7 @@ export interface EmailOptions extends Options {
  * @returns A string or an array of strings.
  */
 
-export function rEmail (options?: EmailOptions) : string | string[] {
+export function rEmail (options?: EmailOptions) {
   const factory = () => {
     const firstName = options?.firstName ?? rFirstName()
     const lastName = options?.lastName ?? rLastName()

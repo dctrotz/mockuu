@@ -17,6 +17,6 @@ import { faker, Options } from '../core'
  * @returns A string or an array of strings.
  */
 
-export function rLastName (options?: Options): string | string[] {
+export function rLastName (options?: Options) {
   return faker(data, options)
 }
