@@ -14,7 +14,38 @@ export interface EmailOptions extends Options {
   separator?: Separators
 }
 
-export function rEmail (options?: EmailOptions) {
+/**
+ * Generates an email address
+ * @param {EmailOptions} [options] - EmailOptions
+ *
+ * @example
+ *
+ * rEmail({ firstname: 'Julian' })
+ *
+ * @example
+ *
+ * rEmail({ lastName: 'Perez' })
+ *
+ * @example
+ *
+ * rEmail({ domainSuffix: 'com' })
+ *
+ * @example
+ *
+ * rEmail({ provider: 'yahoo'})
+ *
+ * @example
+ *
+ * rEmail({ separator: '-' })
+ *
+ * @example
+ *
+ * rEmail({ length: 5 })
+ *
+ * @returns A string or an array of strings.
+ */
+
+export function rEmail (options?: EmailOptions) : string | string[] {
   const factory = () => {
     const firstName = options?.firstName ?? rFirstName()
     const lastName = options?.lastName ?? rLastName()

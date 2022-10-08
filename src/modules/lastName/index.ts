@@ -8,11 +8,13 @@ import { faker, Options } from '../core'
  *
  * @example
  *
- * rLastName() // Chanthara
+ * rLastName()
  *
  * @example
  *
- * rLastName({ length: 2 }) // ['Chanthara', 'Chauke']
+ * rLastName({ length: 2 })
+ *
+ * @returns A string or an array of strings.
  */
 
 export function rLastName (options?: Options): string | string[] {

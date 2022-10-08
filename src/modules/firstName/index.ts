@@ -13,15 +13,17 @@ export interface NameOptions {
  *
  * @example
  *
- * rFirstName({ length: 2 }) // ['Kari','Dianna']
+ * rFirstName()
  *
  * @example
  *
- * rFirstName({ gender: 'female' }) // 'Nadine'
+ * rFirstName({ length: 2 })
  *
  * @example
  *
- * rFirstName({ length: 2, gender: 'male' }) // ['Franklin', 'Jesus']
+ * rFirstName({ gender: 'female' })
+ *
+ * @returns A string or an array of strings.
  */
 
 export function rFirstName (options?: NameOptions) : string | string[] {
