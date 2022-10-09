@@ -1,7 +1,7 @@
 {
-  "name": "typescript-library1000",
+  "name": "mockuu",
   "version": "0.0.0",
-  "description": "",
+  "description": "A simplified way to generate fake user data",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "author": "mateocodes",
@@ -11,8 +11,11 @@
   ],
   "keywords": [
     "fake data",
-    "fake-data-generator",
-    "random data"
+    "user generator",
+    "random user generator",
+    "random user",
+    "mock data",
+    "mock user"
   ],
   "exports": {
     "./package.json": "./package.json",
@@ -24,7 +27,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/MateeoCodes/faker"
+    "url": "https://github.com/MateeoCodes/mockuu"
   },
   "scripts": {
     "dev": "tsc --watch",
