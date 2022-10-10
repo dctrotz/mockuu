@@ -2,21 +2,12 @@ export interface Options {
   length?: number
 }
 
-export type Function<T> = () => T
+export type Factory<T> = () => T
 
-/**
- * It returns a random element from an array
- *
- * @param data - The array of data to choose from.
- * @param {Options} [options]
- * @returns An array of random elements or a single element from the array
- *
- */
-
-export function mockuu<T> (data: Readonly<T[]> | Function<T>, options?: Options) {
+export function mockuu<T> (data: Readonly<T[]> | Factory<T>, options?: Options) {
   const generator = Array.isArray(data)
     ? () => randomElement(data)
-    : data as Function<T>
+    : (data as Factory<T>)
 
   if (!options?.length) {
     return generator()
@@ -29,6 +20,7 @@ export function mockuu<T> (data: Readonly<T[]> | Function<T>, options?: Options)
  * Takes an array and returns a random element from that array
  *
  * @param arr - The array to pick a random element from.
+ *
  * @returns A random element from the array.
  *
  */
