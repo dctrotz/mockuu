@@ -1,6 +1,6 @@
 import { rFirstName } from '../firstName'
 import { rLastName } from '../lastName'
-import { faker, Options } from '../core'
+import { mockuu, Options } from '../core'
 
 export interface FullNameOptions extends Options {
   firstname?: string
@@ -39,5 +39,5 @@ export function rFullName (options?: FullNameOptions) {
     return `${firstname} ${lastName}`
   }
 
-  return faker(factory, options)
+  return mockuu(factory, options)
 }

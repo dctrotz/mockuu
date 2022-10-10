@@ -1,5 +1,5 @@
 import data from '../../locale/last_name'
-import { faker, Options } from '../core'
+import { mockuu, Options } from '../core'
 
 /**
  * Generate a random last name.
@@ -18,5 +18,5 @@ import { faker, Options } from '../core'
  */
 
 export function rLastName (options?: Options) {
-  return faker(data, options)
+  return mockuu(data, options)
 }

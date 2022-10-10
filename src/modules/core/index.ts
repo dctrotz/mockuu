@@ -13,7 +13,7 @@ export type Function<T> = () => T
  *
  */
 
-export function faker<T> (data: Readonly<T[]> | Function<T>, options?: Options) {
+export function mockuu<T> (data: Readonly<T[]> | Function<T>, options?: Options) {
   const generator = Array.isArray(data)
     ? () => randomElement(data)
     : data as Function<T>

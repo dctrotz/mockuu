@@ -1,4 +1,4 @@
-import { faker, Options } from '../core'
+import { mockuu, Options } from '../core'
 import data from '../../locale/email_provider'
 
 /**
@@ -13,5 +13,5 @@ import data from '../../locale/email_provider'
  */
 
 export function rEmailProvider (options?: Options) {
-  return faker(data, options)
+  return mockuu(data, options)
 }

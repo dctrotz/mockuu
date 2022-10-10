@@ -1,4 +1,4 @@
-import { faker, Options } from '../core'
+import { mockuu, Options } from '../core'
 import data from '../../locale/domain_suffix'
 
 /**
@@ -13,5 +13,5 @@ import data from '../../locale/domain_suffix'
  */
 
 export function rDomainSuffix (options?: Options) {
-  return faker(data, options)
+  return mockuu(data, options)
 }

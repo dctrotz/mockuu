@@ -1,6 +1,6 @@
 import { rFirstName } from '../firstName'
 import { rLastName } from '../lastName'
-import { faker, randomElement } from '../core'
+import { mockuu, randomElement } from '../core'
 import { FullNameOptions } from '../fullName'
 import { Separators } from '../email'
 
@@ -57,5 +57,5 @@ export function rUsername (options?: UsernameOptions) {
     return username
   }
 
-  return faker(factory, options)
+  return mockuu(factory, options)
 }

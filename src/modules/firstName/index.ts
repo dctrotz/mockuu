@@ -1,5 +1,5 @@
 import data from '../../locale/fist_name'
-import { faker, randomElement } from '../core'
+import { mockuu, randomElement } from '../core'
 
 export interface NameOptions {
   gender?: 'female' | 'male'
@@ -30,5 +30,5 @@ export function rFirstName (options?: NameOptions) {
   const gender = options?.gender ?? randomElement(['male', 'female'])
   const names = data[gender]
 
-  return faker(names, options)
+  return mockuu(names, options)
 }

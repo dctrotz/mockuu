@@ -1,4 +1,4 @@
-import { Options, faker } from '../core'
+import { Options, mockuu } from '../core'
 import data from '../../locale/country'
 
 export interface CountryOptions extends Options {
@@ -25,5 +25,5 @@ export function rCountry (options?: CountryOptions) {
     ? data.code
     : data.name
 
-  return faker(countries, options)
+  return mockuu(countries, options)
 }

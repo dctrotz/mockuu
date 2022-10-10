@@ -1,4 +1,4 @@
-import { faker, randomElement, Options } from '../core'
+import { mockuu, randomElement, Options } from '../core'
 import { rFirstName } from '../firstName'
 import { rLastName } from '../lastName'
 import { rDomainSuffix } from '../domainSuffix'
@@ -57,5 +57,5 @@ export function rEmail (options?: EmailOptions) {
     return `${firstName}${separator}${lastName}@${provider}.${domainSuffix}`
   }
 
-  return faker(factory, options)
+  return mockuu(factory, options)
 }

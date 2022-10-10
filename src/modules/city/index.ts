@@ -1,4 +1,4 @@
-import { Options, faker } from '../core'
+import { Options, mockuu } from '../core'
 import data from '../../locale/city'
 
 /**
@@ -13,5 +13,5 @@ import data from '../../locale/city'
  */
 
 export function rCity (options?: Options) {
-  return faker(data, options)
+  return mockuu(data, options)
 }
