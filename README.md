@@ -1,5 +1,6 @@
+<img src="https://i.ibb.co/9q6RNKh/mockuu.png" alt="mockuu">
+
 <div align="center">
-  <img src="">
 
   ![GitHub releases](https://img.shields.io/github/release/MateeoCodes/mockuu)
   ![GitHub stars](https://img.shields.io/github/stars/MateeoCodes/mockuu)
