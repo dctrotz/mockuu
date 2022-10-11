@@ -1,6 +1,6 @@
 import { describe, it, expect } from 'vitest'
-import { rPassword } from '../src'
-import { NUMBERS, SYMBOLS } from '../src/modules/password'
+import { rPassword } from '../..'
+import { NUMBERS, SYMBOLS } from '.'
 
 describe('password', () => {
   it('should return a password without numeric and symbols characters', () => {

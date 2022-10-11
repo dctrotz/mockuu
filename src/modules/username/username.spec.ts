@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest'
-import { rUsername, rLastName } from '../src'
+import { rUsername, rLastName } from '../..'
 
 describe('username', () => {
   const numbersRegex: RegExp = /[1-9]/

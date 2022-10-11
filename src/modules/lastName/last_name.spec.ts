@@ -1,6 +1,6 @@
 import { describe, it, expect } from 'vitest'
-import { rLastName } from '../src'
-import data from '../src/locale/last_name'
+import { rLastName } from '../..'
+import data from '../../locale/last_name'
 
 describe('lastName', () => {
   it('should return a random lastName', () => {

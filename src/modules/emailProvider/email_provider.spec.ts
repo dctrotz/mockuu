@@ -1,6 +1,6 @@
 import { describe, it, expect } from 'vitest'
-import { rEmailProvider } from '../src'
-import data from '../src/locale/email_provider'
+import { rEmailProvider } from '../..'
+import data from '../../locale/email_provider'
 
 describe('email provider', () => {
   it('should return a random email provider', () => {

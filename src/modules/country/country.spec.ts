@@ -1,6 +1,6 @@
 import { expect, it, describe } from 'vitest'
-import { rCountry } from '../src'
-import data from '../src/locale/country'
+import { rCountry } from '../..'
+import data from '../../locale/country'
 
 describe('country', () => {
   it('should return a country on code format', () => {

@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest'
-import { rCardenalDirection } from '../src'
+import { rCardenalDirection } from '../..'
 
 describe('cardinal direction', () => {
   it('should return an abbreviated direction', () => {

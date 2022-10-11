@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest'
-import { rFullName, rFirstName, rLastName } from '../src'
+import { rFullName, rFirstName, rLastName } from '../..'
 
 describe('fullname', () => {
   it('should return an array length of 50', () => {

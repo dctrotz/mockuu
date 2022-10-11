@@ -1,6 +1,6 @@
 import { expect, it, describe } from 'vitest'
-import { rDomainSuffix } from '../src'
-import data from '../src/locale/domain_suffix'
+import data from '../../locale/domain_suffix'
+import { rDomainSuffix } from '../..'
 
 describe('domain suffix', () => {
   it('should return a random domain suffix', () => {

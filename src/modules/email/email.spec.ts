@@ -1,5 +1,5 @@
 import { expect, it, describe } from 'vitest'
-import { rEmail } from '../src'
+import { rEmail } from '../..'
 
 describe('email', () => {
   const emailRegex: RegExp =
