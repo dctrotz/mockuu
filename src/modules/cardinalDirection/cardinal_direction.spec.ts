@@ -7,10 +7,4 @@ describe('cardinal direction', () => {
 
     expect(result.length).toBeLessThanOrEqual(2)
   })
-
-  it('should return an array length of 20', () => {
-    const result = rCardenalDirection({ length: 10 })
-
-    expect(result).toHaveLength(10)
-  })
 })

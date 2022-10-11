@@ -1,6 +1,6 @@
 import { rFirstName } from '../firstName'
 import { rLastName } from '../lastName'
-import { mockuu, randomElement } from '../core'
+import { randomElement } from '../core'
 import { FullNameOptions } from '../fullName'
 import { Separators } from '../email'
 
@@ -42,20 +42,16 @@ export interface UsernameOptions extends FullNameOptions {
  */
 
 export function rUsername (options?: UsernameOptions) {
-  const factory = () => {
-    const firstName = options?.firstname ?? rFirstName()
-    const lastName = options?.lastname ?? rLastName()
-    const separator =
-      options?.separator ?? randomElement(['-', '_', '', '+', '.'])
+  const firstName = options?.firstname ?? rFirstName()
+  const lastName = options?.lastname ?? rLastName()
+  const separator =
+    options?.separator ?? randomElement(['-', '_', '', '+', '.'])
 
-    let username = `${firstName}${separator}${lastName}`
+  let username = `${firstName}${separator}${lastName}`
 
-    if (options?.numbers) {
-      username += randomElement([1, 2, 3, 4, 5, 6, 7, 8, 9])
-    }
-
-    return username
+  if (options?.numbers) {
+    username += randomElement([1, 2, 3, 4, 5, 6, 7, 8, 9])
   }
 
-  return mockuu(factory, options)
+  return username
 }

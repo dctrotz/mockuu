@@ -1,4 +1,4 @@
-import { Options, mockuu } from '../core'
+import { mockuu } from '../core'
 import data from 'src/locale/pronoun'
 
 /**
@@ -17,6 +17,6 @@ import data from 'src/locale/pronoun'
  * @returns A string or an array of strings.
  */
 
-export function rPronoun (options?: Options) {
-  return mockuu(data, options)
+export function rPronoun () {
+  return mockuu(data)
 }

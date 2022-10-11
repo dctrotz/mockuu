@@ -1,6 +1,4 @@
-import { mockuu, Options } from '../core'
-
-export interface AvatarOptions extends Options {
+export interface AvatarOptions {
   size?: number
 }
 
@@ -27,5 +25,5 @@ export interface AvatarOptions extends Options {
 export function rAvatar (options?: AvatarOptions) {
   const size = options?.size ?? 200
 
-  return mockuu(() => `https://i.pravatar.cc/${size}`, options)
+  return `https://i.pravatar.cc/${size}`
 }

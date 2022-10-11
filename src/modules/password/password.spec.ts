@@ -14,10 +14,4 @@ describe('password', () => {
     ).toBe(false)
     expect(result).toHaveLength(15)
   })
-
-  it('should return an array length of 5', () => {
-    const result = rPassword({ length: 5 })
-
-    expect(result).toHaveLength(5)
-  })
 })

@@ -29,17 +29,4 @@ describe('email', () => {
 
     expect(result).match(emailRegex)
   })
-
-  it('should return an array length of 20', () => {
-    const result = rEmail({ length: 20 })
-
-    expect(result).toHaveLength(20)
-  })
-
-  it('should return an array length of 2, each with a random email', () => {
-    const [email1, email2] = rEmail({ length: 2 })
-
-    expect(email1).match(emailRegex)
-    expect(email2).match(emailRegex)
-  })
 })

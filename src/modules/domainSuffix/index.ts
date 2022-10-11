@@ -1,4 +1,4 @@
-import { mockuu, Options } from '../core'
+import { mockuu } from '../core'
 import data from '../../locale/domain_suffix'
 
 /**
@@ -12,6 +12,6 @@ import data from '../../locale/domain_suffix'
  * @returns A string or an array of strings.
  */
 
-export function rDomainSuffix (options?: Options) {
-  return mockuu(data, options)
+export function rDomainSuffix () {
+  return mockuu(data)
 }

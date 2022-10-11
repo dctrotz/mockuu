@@ -1,4 +1,4 @@
-import { mockuu, randomElement, Options } from '../core'
+import { randomElement } from '../core'
 import { rFirstName } from '../firstName'
 import { rLastName } from '../lastName'
 import { rDomainSuffix } from '../domainSuffix'
@@ -6,7 +6,7 @@ import { rEmailProvider } from '../emailProvider'
 
 export type Separators = '-' | '_' | '' | '+' | '.'
 
-export interface EmailOptions extends Options {
+export interface EmailOptions {
   firstName?: string
   lastName?: string
   provider?: string
@@ -38,24 +38,16 @@ export interface EmailOptions extends Options {
  *
  * rEmail({ separator: '-' })
  *
- * @example
- *
- * rEmail({ length: 5 })
- *
  * @returns A string or an array of strings.
  */
 
 export function rEmail (options?: EmailOptions) {
-  const factory = () => {
-    const firstName = options?.firstName ?? rFirstName()
-    const lastName = options?.lastName ?? rLastName()
-    const domainSuffix = options?.suffix ?? rDomainSuffix()
-    const provider = options?.provider ?? rEmailProvider()
-    const separator =
-      options?.separator ?? randomElement(['-', '_', '', '+', '.'])
+  const firstName = options?.firstName ?? rFirstName()
+  const lastName = options?.lastName ?? rLastName()
+  const domainSuffix = options?.suffix ?? rDomainSuffix()
+  const provider = options?.provider ?? rEmailProvider()
+  const separator =
+    options?.separator ?? randomElement(['-', '_', '', '+', '.'])
 
-    return `${firstName}${separator}${lastName}@${provider}.${domainSuffix}`
-  }
-
-  return mockuu(factory, options)
+  return `${firstName}${separator}${lastName}@${provider}.${domainSuffix}`
 }

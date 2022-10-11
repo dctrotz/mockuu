@@ -1,7 +1,7 @@
-import { Options, mockuu } from '../core'
+import { mockuu } from '../core'
 import data from 'src/locale/direction'
 
-export interface CardenalDirectionOptions extends Options {
+export interface CardenalDirectionOptions {
   useAbbr?: boolean
 }
 
@@ -25,5 +25,5 @@ export function rCardenalDirection (options?: CardenalDirectionOptions) {
     ? data.withAbbr
     : data.withoutAbbr
 
-  return mockuu(directions, options)
+  return mockuu(directions)
 }

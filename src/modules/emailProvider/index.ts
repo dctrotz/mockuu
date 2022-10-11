@@ -1,4 +1,4 @@
-import { mockuu, Options } from '../core'
+import { mockuu } from '../core'
 import data from '../../locale/email_provider'
 
 /**
@@ -12,6 +12,6 @@ import data from '../../locale/email_provider'
  * @returns A string or an array of strings.
  */
 
-export function rEmailProvider (options?: Options) {
-  return mockuu(data, options)
+export function rEmailProvider () {
+  return mockuu(data)
 }

@@ -8,10 +8,4 @@ describe('email provider', () => {
 
     expect(data).toContain(result)
   })
-
-  it('should return an array length of 5', () => {
-    const result = rEmailProvider({ length: 5 })
-
-    expect(result).toHaveLength(5)
-  })
 })

@@ -1,4 +1,4 @@
-import { Options, mockuu } from '../core'
+import { mockuu } from '../core'
 import data from '../../locale/city'
 
 /**
@@ -12,6 +12,6 @@ import data from '../../locale/city'
  * @returns A string or an array of strings.
  */
 
-export function rCity (options?: Options) {
-  return mockuu(data, options)
+export function rCity () {
+  return mockuu(data)
 }

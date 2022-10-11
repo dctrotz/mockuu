@@ -1,8 +1,7 @@
 import { rFirstName } from '../firstName'
 import { rLastName } from '../lastName'
-import { mockuu, Options } from '../core'
 
-export interface FullNameOptions extends Options {
+export interface FullNameOptions {
   firstname?: string
   lastname?: string
 }
@@ -32,12 +31,8 @@ export interface FullNameOptions extends Options {
  */
 
 export function rFullName (options?: FullNameOptions) {
-  const factory = () => {
-    const firstname = options?.firstname ?? rFirstName()
-    const lastName = options?.lastname ?? rLastName()
+  const firstname = options?.firstname ?? rFirstName()
+  const lastName = options?.lastname ?? rLastName()
 
-    return `${firstname} ${lastName}`
-  }
-
-  return mockuu(factory, options)
+  return `${firstname} ${lastName}`
 }

@@ -30,5 +30,5 @@ export function rFirstName (options?: NameOptions) {
   const gender = options?.gender ?? randomElement(['male', 'female'])
   const names = data[gender]
 
-  return mockuu(names, options)
+  return mockuu(names)
 }

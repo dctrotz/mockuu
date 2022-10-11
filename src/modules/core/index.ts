@@ -1,19 +1,11 @@
-export interface Options {
-  length?: number
-}
+/**
+ * It takes an array of data and returns a random element from that array
+ * @param data - Readonly<T[]>
+ * @returns A function that takes an array and returns a random element from that array.
+*/
 
-export type Factory<T> = () => T
-
-export function mockuu<T> (data: Readonly<T[]> | Factory<T>, options?: Options) {
-  const generator = Array.isArray(data)
-    ? () => randomElement(data)
-    : (data as Factory<T>)
-
-  if (!options?.length) {
-    return generator()
-  }
-
-  return Array.from({ length: options.length }, () => generator())
+export function mockuu<T> (data: Readonly<T[]>) {
+  return randomElement(data)
 }
 
 /**

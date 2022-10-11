@@ -1,6 +1,4 @@
-import { mockuu, Options } from '../core'
-
-export interface PasswordOptions extends Options {
+export interface PasswordOptions {
   size?: number
   numericChars?: boolean
   symbolsChars?: boolean
@@ -11,28 +9,24 @@ export const NUMBERS = '0123456789'
 export const SYMBOLS = '!@#$^&*()_+=/?.,<>'
 
 export function rPassword (options?: PasswordOptions) {
-  const factory = () => {
-    let chars: string = ''
-    const size = options?.size ?? 15
+  let chars: string = ''
+  const size = options?.size ?? 15
 
-    if (!options?.numericChars && !options?.symbolsChars) {
-      chars += `${ALPHABET}${ALPHABET.toUpperCase()}`
-    }
-    if (options?.numericChars) {
-      chars += `${ALPHABET}${NUMBERS}${ALPHABET.toUpperCase()}`
-    }
-    if (options?.symbolsChars) {
-      chars += `${ALPHABET}${SYMBOLS}${ALPHABET.toUpperCase()}`
-    }
-
-    let result: string = ''
-
-    for (let i = size; i > 0; --i) {
-      result += chars[Math.floor(Math.random() * chars.length)]
-    }
-
-    return result
+  if (!options?.numericChars && !options?.symbolsChars) {
+    chars += `${ALPHABET}${ALPHABET.toUpperCase()}`
+  }
+  if (options?.numericChars) {
+    chars += `${ALPHABET}${NUMBERS}${ALPHABET.toUpperCase()}`
+  }
+  if (options?.symbolsChars) {
+    chars += `${ALPHABET}${SYMBOLS}${ALPHABET.toUpperCase()}`
   }
 
-  return mockuu(factory, options)
+  let result: string = ''
+
+  for (let i = size; i > 0; --i) {
+    result += chars[Math.floor(Math.random() * chars.length)]
+  }
+
+  return result
 }
