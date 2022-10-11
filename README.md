@@ -1,4 +1,4 @@
-<img src="https://i.ibb.co/9q6RNKh/mockuu.png" alt="mockuu" width=100%>
+<img src="https://i.ibb.co/MscKhwx/mockuu.png" width=100%>
 
 <div align="center">
 
