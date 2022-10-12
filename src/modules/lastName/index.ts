@@ -17,6 +17,6 @@ import { mockuu } from '../core'
  * @returns A string or an array of strings.
  */
 
-export function rLastName () {
+export function randomLastName () : string {
   return mockuu(data)
 }

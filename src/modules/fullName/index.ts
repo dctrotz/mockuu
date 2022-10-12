@@ -1,5 +1,5 @@
-import { rFirstName } from '../firstName'
-import { rLastName } from '../lastName'
+import { randomFirstName } from '../firstName'
+import { randomLastName } from '../lastName'
 
 export interface FullNameOptions {
   firstname?: string
@@ -30,9 +30,9 @@ export interface FullNameOptions {
  * @returns A string or an array of strings.
  */
 
-export function rFullName (options?: FullNameOptions) {
-  const firstname = options?.firstname ?? rFirstName()
-  const lastName = options?.lastname ?? rLastName()
+export function randomFullName (options?: FullNameOptions) : string {
+  const firstname = options?.firstname ?? randomFirstName()
+  const lastName = options?.lastname ?? randomLastName()
 
   return `${firstname} ${lastName}`
 }

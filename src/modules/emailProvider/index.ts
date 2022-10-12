@@ -12,6 +12,6 @@ import data from '../../locale/email_provider'
  * @returns A string or an array of strings.
  */
 
-export function rEmailProvider () {
+export function randomEmailProvider (): string {
   return mockuu(data)
 }

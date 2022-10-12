@@ -12,6 +12,6 @@ import data from '../../locale/city'
  * @returns A string or an array of strings.
  */
 
-export function rCity () {
+export function randomCity () : string {
   return mockuu(data)
 }

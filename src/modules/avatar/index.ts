@@ -22,7 +22,7 @@ export interface AvatarOptions {
  * @returns A string or an array of strings.
  */
 
-export function rAvatar (options?: AvatarOptions) {
+export function randomAvatar (options?: AvatarOptions) {
   const size = options?.size ?? 200
 
   return `https://i.pravatar.cc/${size}`

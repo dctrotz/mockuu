@@ -17,6 +17,6 @@ import data from '../../locale/gender'
  * @returns A string or an array of strings.
  */
 
-export function rGender () {
+export function randomGender () : string {
   return mockuu(data)
 }

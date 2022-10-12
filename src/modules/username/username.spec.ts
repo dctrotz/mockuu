@@ -1,18 +1,18 @@
 import { describe, it, expect } from 'vitest'
-import { rUsername, rLastName } from '../..'
+import { randomUsername, randomLastName } from '../..'
 
 describe('username', () => {
   const numbersRegex: RegExp = /[1-9]/
 
   it('should not contain numbers', () => {
-    const result = rUsername()
+    const result = randomUsername()
 
     expect(result).not.match(numbersRegex)
   })
 
   it('should contain the lastName', () => {
-    const lastname : string = rLastName()
-    const result = rUsername({ lastname })
+    const lastname : string = randomLastName()
+    const result = randomUsername({ lastname })
 
     expect(result).toContain(lastname)
   })

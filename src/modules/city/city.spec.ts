@@ -1,9 +1,9 @@
 import { describe, it, expect } from 'vitest'
-import { rCity } from '../..'
+import { randomCity } from '../..'
 
 describe('city', () => {
   it('should return a random city', () => {
-    const result = rCity()
+    const result = randomCity()
 
     expect(result).toBeTypeOf('string')
   })

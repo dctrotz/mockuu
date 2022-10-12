@@ -17,6 +17,6 @@ import data from 'src/locale/pronoun'
  * @returns A string or an array of strings.
  */
 
-export function rPronoun () {
+export function randomPronoun () : string {
   return mockuu(data)
 }

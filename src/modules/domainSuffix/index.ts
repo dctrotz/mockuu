@@ -12,6 +12,6 @@ import data from '../../locale/domain_suffix'
  * @returns A string or an array of strings.
  */
 
-export function rDomainSuffix () {
+export function randomDomainSuffix () : string {
   return mockuu(data)
 }

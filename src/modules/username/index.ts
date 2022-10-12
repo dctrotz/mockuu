@@ -1,5 +1,5 @@
-import { rFirstName } from '../firstName'
-import { rLastName } from '../lastName'
+import { randomFirstName } from '../firstName'
+import { randomLastName } from '../lastName'
 import { randomElement } from '../core'
 import { FullNameOptions } from '../fullName'
 import { Separators } from '../email'
@@ -41,9 +41,9 @@ export interface UsernameOptions extends FullNameOptions {
  * @returns A string or an array of strings.
  */
 
-export function rUsername (options?: UsernameOptions) {
-  const firstName = options?.firstname ?? rFirstName()
-  const lastName = options?.lastname ?? rLastName()
+export function randomUsername (options?: UsernameOptions) {
+  const firstName = options?.firstname ?? randomFirstName()
+  const lastName = options?.lastname ?? randomLastName()
   const separator =
     options?.separator ?? randomElement(['-', '_', '', '+', '.'])
 

@@ -8,7 +8,7 @@ export const ALPHABET = 'abcdefghijklmnopqrstuvwxyz'
 export const NUMBERS = '0123456789'
 export const SYMBOLS = '!@#$^&*()_+=/?.,<>'
 
-export function rPassword (options?: PasswordOptions) {
+export function randomPassword (options?: PasswordOptions) : string {
   let chars: string = ''
   const size = options?.size ?? 15
 

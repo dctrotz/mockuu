@@ -1,8 +1,8 @@
 import { randomElement } from '../core'
-import { rFirstName } from '../firstName'
-import { rLastName } from '../lastName'
-import { rDomainSuffix } from '../domainSuffix'
-import { rEmailProvider } from '../emailProvider'
+import { randomFirstName } from '../firstName'
+import { randomLastName } from '../lastName'
+import { randomDomainSuffix } from '../domainSuffix'
+import { randomEmailProvider } from '../emailProvider'
 
 export type Separators = '-' | '_' | '' | '+' | '.'
 
@@ -41,11 +41,11 @@ export interface EmailOptions {
  * @returns A string or an array of strings.
  */
 
-export function rEmail (options?: EmailOptions) {
-  const firstName = options?.firstName ?? rFirstName()
-  const lastName = options?.lastName ?? rLastName()
-  const domainSuffix = options?.suffix ?? rDomainSuffix()
-  const provider = options?.provider ?? rEmailProvider()
+export function randomEmail (options?: EmailOptions): string {
+  const firstName = options?.firstName ?? randomFirstName()
+  const lastName = options?.lastName ?? randomLastName()
+  const domainSuffix = options?.suffix ?? randomDomainSuffix()
+  const provider = options?.provider ?? randomEmailProvider()
   const separator =
     options?.separator ?? randomElement(['-', '_', '', '+', '.'])
 

@@ -1,7 +1,7 @@
 import { mockuu } from '../core'
 import data from 'src/locale/direction'
 
-export interface CardenalDirectionOptions {
+export interface DirectionOptions {
   useAbbr?: boolean
 }
 
@@ -20,7 +20,7 @@ export interface CardenalDirectionOptions {
  * @returns A string or an array of strings.
  */
 
-export function rCardenalDirection (options?: CardenalDirectionOptions) {
+export function randomDirection (options?: DirectionOptions) : string {
   const directions = options?.useAbbr
     ? data.withAbbr
     : data.withoutAbbr

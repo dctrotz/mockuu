@@ -20,10 +20,8 @@ export interface CountryOptions {
  * @returns A string or an array of strings.
  */
 
-export function rCountry (options?: CountryOptions) {
-  const countries = options?.code
-    ? data.code
-    : data.name
+export function randomCountry (options?: CountryOptions): string {
+  const countries = options?.code ? data.code : data.name
 
   return mockuu(countries)
 }
