@@ -1,30 +1,42 @@
 export interface PasswordOptions {
-  size?: number
+  len?: number
+  pin?: boolean
   numericChars?: boolean
   symbolsChars?: boolean
 }
 
-export const ALPHABET = 'abcdefghijklmnopqrstuvwxyz'
+export const ALPHABET = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ'
 export const NUMBERS = '0123456789'
 export const SYMBOLS = '!@#$^&*()_+=/?.,<>'
 
-export function randomPassword (options?: PasswordOptions) : string {
+export function randomPassword <Options extends PasswordOptions> (
+  options?: Options
+): string {
   let chars: string = ''
-  const size = options?.size ?? 15
+  let result: string = ''
+  const len = options?.len ?? 15
+
+  if (options?.pin) {
+    chars += NUMBERS
+
+    for (let i = len; i > 0; --i) {
+      result += chars[Math.floor(Math.random() * chars.length)]
+    }
+
+    return result
+  }
 
   if (!options?.numericChars && !options?.symbolsChars) {
-    chars += `${ALPHABET}${ALPHABET.toUpperCase()}`
+    chars += `${ALPHABET}`
   }
   if (options?.numericChars) {
-    chars += `${ALPHABET}${NUMBERS}${ALPHABET.toUpperCase()}`
+    chars += `${ALPHABET}${NUMBERS}`
   }
   if (options?.symbolsChars) {
-    chars += `${ALPHABET}${SYMBOLS}${ALPHABET.toUpperCase()}`
+    chars += `${ALPHABET}${SYMBOLS}`
   }
 
-  let result: string = ''
-
-  for (let i = size; i > 0; --i) {
+  for (let i = len; i > 0; --i) {
     result += chars[Math.floor(Math.random() * chars.length)]
   }
 

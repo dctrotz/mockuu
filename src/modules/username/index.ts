@@ -20,10 +20,6 @@ export interface UsernameOptions extends FullNameOptions {
  *
  * @example
  *
- * rUsername({ length: 2 })
- *
- * @example
- *
  * rUsername({ firstname: 'Miguel' })
  *
  * @example
@@ -41,7 +37,7 @@ export interface UsernameOptions extends FullNameOptions {
  * @returns A string or an array of strings.
  */
 
-export function randomUsername (options?: UsernameOptions) {
+export function randomUsername<Options extends UsernameOptions> (options?: Options) : string {
   const firstName = options?.firstname ?? randomFirstName()
   const lastName = options?.lastname ?? randomLastName()
   const separator =
@@ -50,7 +46,7 @@ export function randomUsername (options?: UsernameOptions) {
   let username = `${firstName}${separator}${lastName}`
 
   if (options?.numbers) {
-    username += randomElement([1, 2, 3, 4, 5, 6, 7, 8, 9])
+    username += Math.floor(Math.random() * 1000)
   }
 
   return username
