@@ -4,17 +4,10 @@ import data from '../../locale/gender'
 /**
  * Generate a random gender.
  *
- * @param {Options} [options]
- *
  * @example
  *
- * rGender()
+ * randomGender()
  *
- * @example
- *
- * rGender({ length: 2 })
- *
- * @returns A string or an array of strings.
  */
 
 export function randomGender () : string {

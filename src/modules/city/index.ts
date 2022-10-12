@@ -3,13 +3,10 @@ import data from '../../locale/city'
 
 /**
  * Generate a random city
- * @param {Options} [options] - Options
  *
  * @example
  *
- * rCity({ length: 4 })
- *
- * @returns A string or an array of strings.
+ * randomCity()
  */
 
 export function randomCity () : string {

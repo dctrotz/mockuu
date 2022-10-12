@@ -9,28 +9,23 @@ export interface FullNameOptions {
 /**
  * Generate a random full name.
  *
- * @param {Options} [options]
+ * @example
+ *
+ * randomFullName()
  *
  * @example
  *
- * rFullName()
+ * randomFullName({ firstname: 'Mat' })
  *
  * @example
  *
- * rFullName({ length: 2 })
+ * randomFullName({ lastname: 'duran' })
  *
- * @example
- *
- * rFullName({ firstname: 'Mat' })
- *
- * @example
- *
- * rFullName({ lastname: 'duran' })
- *
- * @returns A string or an array of strings.
  */
 
-export function randomFullName (options?: FullNameOptions) : string {
+export function randomFullName<Options extends FullNameOptions> (
+  options?: Options
+): string {
   const firstname = options?.firstname ?? randomFirstName()
   const lastName = options?.lastname ?? randomLastName()
 

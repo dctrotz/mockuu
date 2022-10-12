@@ -5,24 +5,21 @@ export interface AvatarOptions {
 /**
  * Generate a random avatar.
  *
- * @param {Options} [options]
+ * @example
+ *
+ * randomAvatar()
  *
  * @example
  *
- * rAvatar()
+ * randomAvatar({ length: 2 })
  *
  * @example
  *
- * rAvatar({ length: 2 })
+ * randomAvatar({ size: 400 }) // default is 200
  *
- * @example
- *
- * rAvatar({ size: 400 })
- *
- * @returns A string or an array of strings.
  */
 
-export function randomAvatar (options?: AvatarOptions) {
+export function randomAvatar<Options extends AvatarOptions> (options?: Options) {
   const size = options?.size ?? 200
 
   return `https://i.pravatar.cc/${size}`

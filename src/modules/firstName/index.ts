@@ -3,30 +3,24 @@ import { mockuu, randomElement } from '../core'
 
 export interface NameOptions {
   gender?: 'female' | 'male'
-  length?: number
 }
 
 /**
  * Generate a random firstName
  *
- * @param {NameOptions} [options] - FirstNameOptions
+ * @example
+ *
+ * randomFirstName()
  *
  * @example
  *
- * rFirstName()
+ * randomFirstName({ gender: 'female' })
  *
- * @example
- *
- * rFirstName({ length: 2 })
- *
- * @example
- *
- * rFirstName({ gender: 'female' })
- *
- * @returns A string or an array of strings.
  */
 
-export function randomFirstName (options?: NameOptions): string {
+export function randomFirstName<Options extends NameOptions> (
+  options?: Options
+): string {
   const gender = options?.gender ?? randomElement(['male', 'female'])
   const names = data[gender]
 

@@ -12,29 +12,26 @@ export interface UsernameOptions extends FullNameOptions {
 /**
  * Generate a random username.
  *
- * @param {Options} [options]
+ * @example
+ *
+ * randomUsername()
  *
  * @example
  *
- * rUsername()
+ * randomUsername({ firstname: 'Miguel' })
  *
  * @example
  *
- * rUsername({ firstname: 'Miguel' })
+ * randomUsername({ lastName: 'Perez'})
  *
  * @example
  *
- * rUsername({ lastName: 'Perez'})
+ * randomUsername({ separator: '-' })
  *
  * @example
  *
- * rUsername({ separator: '-' })
+ * randomUsername({ numbers: true }) // default is false
  *
- * @example
- *
- * rUsername({ numbers: true })
- *
- * @returns A string or an array of strings.
  */
 
 export function randomUsername<Options extends UsernameOptions> (options?: Options) : string {

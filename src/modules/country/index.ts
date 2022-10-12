@@ -7,20 +7,20 @@ export interface CountryOptions {
 
 /**
  * Generate a random country
- * @param {Options} [options] - Options
  *
  * @example
  *
- * rCountry({ length: 4 })
+ * randomCountry()
  *
  * @example
  *
- * rCountry({ code: true })
+ * randomCountry({ code: true }) // default is false
  *
- * @returns A string or an array of strings.
  */
 
-export function randomCountry (options?: CountryOptions): string {
+export function randomCountry<Options extends CountryOptions> (
+  options?: Options
+): string {
   const countries = options?.code ? data.code : data.name
 
   return mockuu(countries)

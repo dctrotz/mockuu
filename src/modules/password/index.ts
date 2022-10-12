@@ -9,6 +9,33 @@ export const ALPHABET = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ'
 export const NUMBERS = '0123456789'
 export const SYMBOLS = '!@#$^&*()_+=/?.,<>'
 
+/**
+ * Generate a random password.
+ *
+ * @example
+ *
+ * randomPassword()
+ *
+ * @example
+ *
+ * randomPassword({ len: 10 }) // default is 15
+ *
+ * @example
+ *
+ * randomPassword({ pin: true }) // default is false
+ *
+ *
+ * @example
+ *
+ * randomPassword({ numericChars: true }) // default is false
+ *
+ *
+ * @example
+ *
+ * randomPassword({ symbolsChars: true }) // default is false
+ *
+ */
+
 export function randomPassword <Options extends PasswordOptions> (
   options?: Options
 ): string {

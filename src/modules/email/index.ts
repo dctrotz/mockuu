@@ -16,32 +16,32 @@ export interface EmailOptions {
 
 /**
  * Generates an email address
- * @param {EmailOptions} [options] - EmailOptions
  *
  * @example
  *
- * rEmail({ firstname: 'Julian' })
+ * randomEmail({ firstname: 'Julian' })
  *
  * @example
  *
- * rEmail({ lastName: 'Perez' })
+ * randomEmail({ lastName: 'Perez' })
  *
  * @example
  *
- * rEmail({ domainSuffix: 'com' })
+ * randomEmail({ domainSuffix: 'com' })
  *
  * @example
  *
- * rEmail({ provider: 'yahoo'})
+ * randomEmail({ provider: 'yahoo'})
  *
  * @example
  *
- * rEmail({ separator: '-' })
+ * randomEmail({ separator: '-' })
  *
- * @returns A string or an array of strings.
  */
 
-export function randomEmail (options?: EmailOptions): string {
+export function randomEmail<Options extends EmailOptions> (
+  options?: Options
+): string {
   const firstName = options?.firstName ?? randomFirstName()
   const lastName = options?.lastName ?? randomLastName()
   const domainSuffix = options?.suffix ?? randomDomainSuffix()

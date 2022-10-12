@@ -2,19 +2,11 @@ import { mockuu } from '../core'
 import data from 'src/locale/pronoun'
 
 /**
- * Generate a random pronoun
- *
- * @param {Options} [options] - Options
+ * Generate a random pronoun.
  *
  * @example
  *
- * rPronoun()
- *
- * @example
- *
- * rPronoun({ length: 5 })
- *
- * @returns A string or an array of strings.
+ * randomPronoun()
  */
 
 export function randomPronoun () : string {
