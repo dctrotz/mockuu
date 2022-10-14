@@ -1,5 +1,5 @@
 import data from '../../locale/fist_name'
-import { mockuu, randomElement } from '../core'
+import { mockuu } from '../core'
 
 export interface NameOptions {
   gender?: 'female' | 'male'
@@ -21,7 +21,7 @@ export interface NameOptions {
 export function randomFirstName<Options extends NameOptions> (
   options?: Options
 ): string {
-  const gender = options?.gender ?? randomElement(['male', 'female'])
+  const gender = options?.gender ?? mockuu(['male', 'female'])
   const names = data[gender]
 
   return mockuu(names)

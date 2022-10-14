@@ -1,8 +1,5 @@
-export interface LongitudeOptions {
-  max: number
-  min: number
-  precision: number
-}
+import { RandomNumberOptions, randomNumber } from '../number'
+export interface LongitudeOptions extends Omit<RandomNumberOptions, 'length'> {}
 
 /**
  * Generate a random longitude.
@@ -28,9 +25,11 @@ export interface LongitudeOptions {
 export function randomLongitude<Options extends LongitudeOptions> (
   options?: Options
 ): string {
-  const max = options?.max ?? 200
-  const min = options?.min ?? -200
-  const precision = options?.precision ?? 4
+  const [min, max, precision] = [
+    options?.min ?? -200,
+    options?.max ?? 200,
+    options?.precision ?? 4
+  ]
 
-  return (Math.random() * (max - min) + min).toFixed(precision)
+  return randomNumber({ max, min, precision }).toString()
 }

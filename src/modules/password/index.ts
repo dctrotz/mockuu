@@ -1,13 +1,11 @@
+import { ALPHABET, NUMBERS, SYMBOLS } from '../core/constants'
+
 export interface PasswordOptions {
   len?: number
   pin?: boolean
   numericChars?: boolean
   symbolsChars?: boolean
 }
-
-export const ALPHABET = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ'
-export const NUMBERS = '0123456789'
-export const SYMBOLS = '!@#$^&*()_+=/?.,<>'
 
 /**
  * Generate a random password.
@@ -36,7 +34,7 @@ export const SYMBOLS = '!@#$^&*()_+=/?.,<>'
  *
  */
 
-export function randomPassword <Options extends PasswordOptions> (
+export function randomPassword<Options extends PasswordOptions> (
   options?: Options
 ): string {
   let chars: string = ''

@@ -1,6 +1,6 @@
 import { randomFirstName } from '../firstName'
 import { randomLastName } from '../lastName'
-import { randomElement } from '../core'
+import { mockuu } from '../core'
 import { FullNameOptions } from '../fullName'
 import { Separators } from '../email'
 
@@ -38,7 +38,7 @@ export function randomUsername<Options extends UsernameOptions> (options?: Optio
   const firstName = options?.firstname ?? randomFirstName()
   const lastName = options?.lastname ?? randomLastName()
   const separator =
-    options?.separator ?? randomElement(['-', '_', '', '+', '.'])
+    options?.separator ?? mockuu(['-', '_', '', '+', '.'])
 
   let username = `${firstName}${separator}${lastName}`
 

@@ -1,10 +1,8 @@
-import { mockuu } from '../core'
+import { replaceChars } from '../core'
 
 export interface PhoneOptions {
   format?: string
 }
-
-export const NUMBERS = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9']
 
 /**
  * Generate a random phone number.
@@ -24,11 +22,5 @@ export function randomPhone<Options extends PhoneOptions> (
 ): string {
   const format = options?.format ?? '+45 ## ### ## ##'
 
-  return format
-    .split('')
-    .map((item) => {
-      if (item === '#') return mockuu(NUMBERS)
-      else return item
-    })
-    .join('')
+  return replaceChars({ char: '#', format })
 }

@@ -1,25 +1,19 @@
-import { PhoneOptions, NUMBERS } from '../phone'
-import { mockuu } from '../core'
+import { PhoneOptions } from '../phone'
+import { replaceChars } from '../core'
+import { randomNumber } from '../number'
+import { randomBoolean } from '../boolean'
 
 export interface ZipCodeOptions extends PhoneOptions {}
 /**
- * Generate a random latitude.
+ * Generate a random zip code.
  *
  * @example
  *
- * randomLatitude()
+ * randomZipCode()
  *
  * @example
  *
- * randomLatitude({ max: 180 }) // default is 100
- *
- * @example
- *
- * randomLatitude({ min: -200 }) // default is -100
- *
- * @example
- *
- * randomLatitude({ precision: 10 }) // default is 4
+ * randomZipCode({ format: '####-####' })
  *
  */
 
@@ -27,19 +21,13 @@ export function randomZipCode<Options extends ZipCodeOptions> (
   options?: Options
 ): string {
   if (options?.format) {
-    return options?.format
-      .split('')
-      .map((item) => {
-        if (item === '#') return mockuu(NUMBERS)
-        else return item
-      })
-      .join('')
+    return replaceChars({ char: '#', format: options.format })
   }
 
-  let zipCode = '' + Math.floor(Math.random() * 9000 + 1000)
+  let zipCode = '' + randomNumber({ min: 1000, max: 9000 })
 
-  if (mockuu([false, true])) {
-    zipCode += '-' + Math.floor(Math.random() * 9000 + 1000)
+  if (randomBoolean()) {
+    zipCode += '-' + randomNumber({ min: 1000, max: 9000 })
   }
 
   return zipCode

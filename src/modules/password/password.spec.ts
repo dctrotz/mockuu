@@ -1,6 +1,6 @@
 import { describe, it, expect } from 'vitest'
 import { randomPassword } from '../..'
-import { NUMBERS, SYMBOLS, ALPHABET } from '.'
+import { ALPHABET, NUMBERS, SYMBOLS } from '../core/constants'
 
 describe('password', () => {
   it('should return a password without numeric and symbols characters', () => {

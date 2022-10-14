@@ -1,4 +1,4 @@
-import { randomElement } from '../core'
+import { mockuu } from '../core'
 import { randomFirstName } from '../firstName'
 import { randomLastName } from '../lastName'
 import { randomDomainSuffix } from '../domainSuffix'
@@ -47,7 +47,7 @@ export function randomEmail<Options extends EmailOptions> (
   const domainSuffix = options?.suffix ?? randomDomainSuffix()
   const provider = options?.provider ?? randomEmailProvider()
   const separator =
-    options?.separator ?? randomElement(['-', '_', '', '+', '.'])
+    options?.separator ?? mockuu(['-', '_', '', '+', '.'])
 
   return `${firstName}${separator}${lastName}@${provider}.${domainSuffix}`
 }
