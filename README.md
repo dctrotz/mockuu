@@ -15,7 +15,7 @@
 
 ## 🎉 Features
 
-- 📦 +15 functions
+- 📦 +24 functions
 - 💙 Fully Typed
 - 🔥 Ready to use with JavaScript & Typescript
 
@@ -54,6 +54,15 @@ const password = randomPassword({ size: 20, symbolsChars: true })
 | Password       | `randomPassword()`      | KKmD3sMIcg@vPg^KTZ9>      |
 | Pronoun        | `randomPronoun()`       | They/Them                 |
 | Username       | `randomUsername()`      | Rosemarie_Chebet          |
+| Zip code       | `randomZipCode()`       | 5786                      |
+| Longitude      | `randomLongitude()`     | 154.0226                  |
+| Latitude       | `randomLatitude()`      | -30.9501                  |
+| Hobby          | `randomHobby()`         | Watching movies           |
+| Job            | `randomJob()`           | Designer                  |
+| Language       | `randomLanguage()`      | Spanish                   |
+| Phone          | `randomPhone()`         | +42 91 463 61 70          |
+| Boolean        | `randomBoolean()`       | true                      |
+| Number         | `randomNumber()`        | 60000                     |
 
 ## 🔑 License
 
