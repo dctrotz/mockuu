@@ -15,7 +15,7 @@
 
 ## 🎉 Features
 
-- 📦 +24 functions
+- 📦 +29 functions
 - 💙 Fully Typed
 - 🔥 Ready to use with JavaScript & Typescript
 
@@ -63,6 +63,12 @@ const password = randomPassword({ size: 20, symbolsChars: true })
 | Phone          | `randomPhone()`         | +42 91 463 61 70          |
 | Boolean        | `randomBoolean()`       | true                      |
 | Number         | `randomNumber()`        | 60000                     |
+| Street name    | `randomStreetName()`    | Franklin Avenue           |
+| Role           | `randomRole()`          | Admin                     |
+| Timezone       | `randomTimezone()`      | Asia/Magadan              |
+| Street address | `randomStreetAddress()` | 3000 Hewes                |
+| State          | `randomState()`         | Illinois                  |
+| Country Code   | `randomCountryCode()`   | BT                        |
 
 ## 🔑 License
 
