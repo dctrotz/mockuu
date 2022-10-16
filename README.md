@@ -2,10 +2,10 @@
 
 <div align="center">
 
-![GitHub releases](https://img.shields.io/github/release/MateeoCodes/mockuu)
+![NPM releases](https://img.shields.io/npm/v/mockuu)
 ![GitHub stars](https://img.shields.io/github/stars/MateeoCodes/mockuu)
 ![GitHub issues](https://img.shields.io/github/issues/MateeoCodes/mockuu)
-![GitHub license](https://img.shields.io/github/license/MateeoCodes/mockuu)
+![GitHub](https://img.shields.io/github/license/MateeoCodes/mockuu)
 
 </div>
 

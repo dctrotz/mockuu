@@ -1,10 +1,10 @@
 {
   "name": "mockuu",
-  "version": "0.0.0",
-  "description": "A simplified way to generate fake user data",
+  "version": "1.0.0",
+  "description": "A simplified way to generate user data",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
-  "author": "mateocodes",
+  "author": "MateeoCodes",
   "license": "MIT",
   "files": [
     "dist"
