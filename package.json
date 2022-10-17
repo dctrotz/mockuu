@@ -1,6 +1,6 @@
 {
   "name": "mockuu",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A simplified way to generate user data",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
