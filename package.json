@@ -35,7 +35,8 @@
     "lint:fix": "eslint --fix --ext ts .",
     "build": "tsup",
     "test": "vitest",
-    "coverage": "vitest run --coverage"
+    "coverage": "vitest run --coverage",
+    "prepare": "tsup"
   },
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "5.39.0",
